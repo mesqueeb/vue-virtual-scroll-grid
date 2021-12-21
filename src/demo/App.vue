@@ -1,7 +1,7 @@
 <template>
   <Header />
 
-  <Grid
+  <VirtualScrollGrid
     :length="length"
     :pageSize="pageSize"
     :pageProvider="pageProvider"
@@ -32,14 +32,14 @@
         :title="item.title"
       />
     </template>
-  </Grid>
+  </VirtualScrollGrid>
 
   <Control />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Grid from "../Grid.vue";
+import VirtualScrollGrid from "../VirtualScrollGrid.vue";
 import Header from "./Header.vue";
 import Control from "./Control.vue";
 import ProductItem from "./ProductItem.vue";
@@ -47,7 +47,7 @@ import { length, pageSize, pageProvider, scrollTo } from "./store";
 
 export default defineComponent({
   name: "App",
-  components: { Grid, ProductItem, Header, Control },
+  components: { VirtualScrollGrid, ProductItem, Header, Control },
   setup: () => ({
     length,
     pageSize,

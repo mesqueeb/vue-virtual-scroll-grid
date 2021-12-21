@@ -52,7 +52,7 @@ import { once } from "ramda";
 import { VueInstance } from "@vueuse/core";
 
 export default defineComponent({
-  name: "Grid",
+  name: "VirtualScrollGrid",
   props: {
     // The number of items in the list.
     length: {

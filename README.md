@@ -39,13 +39,23 @@ npm install vue-virtual-scroll-grid
 Example:
 
 ```vue
-<Grid :length="1000"
-      :pageProvider="async (pageNumber, pageSize) => Array(pageSize).fill('x')"
-      :pageSize="40"
-      :scrollTo="10"
->
-  <!-- ...slots -->
-</Grid>
+<script>
+import { VirtualScrollGrid } from 'vue-virtual-scroll-grid'
+
+export default {
+  components: { VirtualScrollGrid }
+}
+</script>
+
+<template>
+  <VirtualScrollGrid :length="1000"
+        :pageProvider="async (pageNumber, pageSize) => Array(pageSize).fill('x')"
+        :pageSize="40"
+        :scrollTo="10"
+  >
+    <!-- ...slots -->
+  </VirtualScrollGrid>
+</template>
 ```
 
 ## Available Slots

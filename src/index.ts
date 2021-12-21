@@ -1,3 +1,3 @@
-import Grid from './Grid.vue'
+import VirtualScrollGrid from './VirtualScrollGrid.vue'
 
-export default Grid
+export { VirtualScrollGrid }
